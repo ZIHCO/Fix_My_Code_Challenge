@@ -23,7 +23,6 @@ class square():
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         """instatiate a square object"""
         if args:
@@ -52,7 +51,6 @@ class square():
             raise ValueError("size must be >= 0")
         self.__size = value
 
-
     def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.width
@@ -62,6 +60,7 @@ class square():
 
     def __str__(self):
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
