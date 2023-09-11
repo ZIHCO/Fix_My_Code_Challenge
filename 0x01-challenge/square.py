@@ -41,10 +41,12 @@ class square(object):
 
     @property
     def size(self):
+        """getter for size"""
         return self.__size
 
     @size.setter
     def size(self, value):
+        """setter for size"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -56,9 +58,11 @@ class square(object):
         return self.width * self.width
 
     def PermiterOfMySquare(self):
+        """return the perimeter of a square object"""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
+        """return string representation of a square object"""
         return "{}/{}".format(self.width, self.height)
 
 
