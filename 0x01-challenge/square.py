@@ -2,7 +2,7 @@
 """This module contains the square class"""
 
 
-class square(object):
+class Square(object):
     """The square class creates a square object
        Attr:
        width: an integer value >= 0
@@ -64,11 +64,11 @@ class square(object):
     def __str__(self):
         """return string representation of a square object"""
         return "{}/{}".format(self.width, self.height)
-"""
+
 
 if __name__ == "__main__":
 
     s = square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())"""
+    print(s.PermiterOfMySquare())
