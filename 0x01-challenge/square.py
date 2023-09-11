@@ -20,9 +20,6 @@ class Square():
        creating an illogical square object, hence an exception.
     """
 
-    width = 0
-    height = 0
-
     def __init__(self, *args, **kwargs):
         """instatiate a square object"""
         if args:
