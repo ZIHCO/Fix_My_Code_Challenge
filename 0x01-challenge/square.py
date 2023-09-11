@@ -2,7 +2,7 @@
 """This module contains the square class"""
 
 
-class Square(object):
+class square(object):
     """The square class creates a square object
        Attr:
        width: an integer value >= 0
