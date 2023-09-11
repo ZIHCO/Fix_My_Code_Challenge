@@ -2,7 +2,7 @@
 """This module contains the square class"""
 
 
-class square(object):
+class Square(object):
     """The square class creates a square object
        Attr:
        width: an integer value >= 0
@@ -20,8 +20,8 @@ class square(object):
        creating an illogical square object, hence an exception.
     """
 
-    # width = 0
-    # height = 0
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         """instatiate a square object"""
