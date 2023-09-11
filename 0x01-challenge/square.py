@@ -20,8 +20,8 @@ class Square():
        creating an illogical square object, hence an exception.
     """
 
-    """ width = 0
-    # height = 0"""
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         """instatiate a square object"""
@@ -57,7 +57,7 @@ class Square():
         """ Area of the square """
         return self.width * self.width
 
-    def PermiterOfMySquare(self):
+    def perimeter_of_my_square(self):
         """return the perimeter of a square object"""
         return (self.width * 2) + (self.height * 2)
 
@@ -71,4 +71,4 @@ if __name__ == "__main__":
     s = Square(width=9, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    # print(s.PermiterOfMySquare())
