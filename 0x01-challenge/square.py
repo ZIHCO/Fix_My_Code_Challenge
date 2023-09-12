@@ -20,52 +20,71 @@ class Square():
        creating an illogical square object, hence an exception.
     """
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width=0, height=0):
         """instatiate a square object"""
-        if args:
-            self.size = args[0]
-            self.width = self.__size
-            self.height = self.__size
-        else:
-            for key, value in kwargs.items():
-                if type(value) is not int:
-                    raise TypeError(key + " must be an integer")
-                if value < 0:
-                    raise ValueError(key + " must be >= 0")
-                setattr(self, key, value)
-            if self.width != self.height:
-                raise Exception(" width must be == height")
+        """if args:
+            self.width = args[0]
+            self.height = args[0]
+        else:"""
+        """if not kwargs:
+            kwargs = {"width":0, "height":0}
+        for key, value in kwargs.items():
+            setattr(self, key, value)"""
+        if width != height:
+            raise Exception("width must be == height")
+        self.width = width
+        self.height = height
 
     @property
-    def size(self):
-        """getter for size"""
-        return self.__size
+    def width(self):
+        """getter for width"""
+        return self.__width
 
-    @size.setter
-    def size(self, value):
-        """setter for size"""
+    @width.setter
+    def width(self, value):
+        """setter for width"""
         if type(value) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+            raise ValueError("width must be >= 0")
+        """if self.width != self.height:
+            raise Exception(" width must be == height")"""
+        self.__width = value
+
+    @property
+    def height(self):
+        """getter for height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """setter for height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        """if self.width != self.height:
+            raise Exception(" width must be == height")"""
+        self.__height = value
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.width
+        return self.__width * self.__width
 
     def perimeter_of_my_square(self):
         """return the perimeter of a square object"""
-        return (self.width * 2) + (self.height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """return string representation of a square object"""
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.__width, self.__height)
 
 
 if __name__ == "__main__":
 
-    s = Square(width=9, height=9)
+    s = Square(3, 3)
+    print(s)
+    s.width = 4
     print(s)
     print(s.area_of_my_square())
-    # print(s.PermiterOfMySquare())
+    print(s.perimeter_of_my_square())
