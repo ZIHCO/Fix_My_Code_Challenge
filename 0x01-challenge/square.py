@@ -2,6 +2,7 @@
 """This module contains the class, Square"""
 
 class Square():
+    """This class create square objects"""
 
     width = 0
     height = 0
