@@ -8,7 +8,7 @@ class Square():
     width = 0
     height = 0
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, **kwargs):
         """instantiate an object"""
         if len(kwargs) != 2:
             raise Exception("width and height the only fields")
