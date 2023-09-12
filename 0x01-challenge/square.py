@@ -32,6 +32,7 @@ class Square():
 
 
 if __name__ == "__main__":
+    """test code"""
 
     s = Square()
     print(s)
