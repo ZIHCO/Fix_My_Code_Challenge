@@ -5,18 +5,14 @@
 class Square():
     """This class create square objects"""
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, size=0):
         """instantiate an object"""
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
-        self.height = height
-        self.width = width
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.height = size
+        self.width = size
 
     def area_of_my_square(self):
         """ Area of the square """
@@ -33,7 +29,7 @@ class Square():
 
 if __name__ == "__main__":
 
-    s = Square(width=2)
+    s = Square(size=2)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
