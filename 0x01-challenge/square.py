@@ -2,6 +2,10 @@
 """This module contains the square class"""
 
 
+class Rectangle():
+    pass
+
+
 class Square(Rectangle):
     """The square class creates a square object
        Attr:
