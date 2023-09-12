@@ -8,7 +8,7 @@ class Square():
     def __init__(self, **kwargs):
         """instantiate an object"""
         if len(kwargs) != 2:
-            raise Exception("width and height the only fields")
+            raise Exception("define width and height as keyword")
         for key, value in kwargs.items():
             if type(value) is not int:
                 raise TypeError(key + " must be an integer")
@@ -31,7 +31,7 @@ class Square():
 
 if __name__ == "__main__":
 
-    s = Square(height=2, width=2)
+    s = Square(width=2)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
