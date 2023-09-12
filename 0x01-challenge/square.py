@@ -16,8 +16,8 @@ class Square():
             if value < 0:
                 raise ValueError(k + " must be >= 0")
             setattr(self, key, value)
-        if self.width != self.height:
-            raise Exception("width must be == height")
+        """if self.width != self.height:
+            raise Exception("width must be == height")"""
 
     def area_of_my_square(self):
         """ Area of the square """
