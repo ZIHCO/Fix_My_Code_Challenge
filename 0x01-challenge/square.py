@@ -2,7 +2,7 @@
 """This module contains the square class"""
 
 
-class Square():
+class Square(Rectangle):
     """The square class creates a square object
        Attr:
        width: an integer value >= 0
@@ -30,8 +30,6 @@ class Square():
             kwargs = {"width":0, "height":0}
         for key, value in kwargs.items():
             setattr(self, key, value)"""
-        if width != height:
-            raise Exception("width must be == height")
         self.width = width
         self.height = height
 
@@ -47,8 +45,9 @@ class Square():
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        """if self.width != self.height:
-            raise Exception(" width must be == height")"""
+        if value != type(self).height:
+            print(self.height)
+            raise Exception(" width must be == height")
         self.__width = value
 
     @property
@@ -63,13 +62,13 @@ class Square():
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        """if self.width != self.height:
-            raise Exception(" width must be == height")"""
+        if type(self).width != value:
+            raise Exception(" width must be == height")
         self.__height = value
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.__width * self.__width
+        return self.__width * self.__height
 
     def perimeter_of_my_square(self):
         """return the perimeter of a square object"""
@@ -84,7 +83,6 @@ if __name__ == "__main__":
 
     s = Square(3, 3)
     print(s)
-    s.width = 4
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
