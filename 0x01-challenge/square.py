@@ -11,6 +11,10 @@ class Square():
     def __init__(self, *args, **kwargs):
         """instantiate an object"""
         for key, value in kwargs.items():
+            if type(value) is not int:
+                raise TypeError(key + " must be an integer")
+            if value < 0:
+                raise ValueError(k + " must be >= 0")
             setattr(self, key, value)
 
     def area_of_my_square(self):
