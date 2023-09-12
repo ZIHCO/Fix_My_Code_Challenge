@@ -5,7 +5,7 @@
 class Square():
     """This class create square objects"""
 
-    def __init__(self, size=0):
+    def __init__(self, width=0, height=0):
         """instantiate an object"""
         """if len(kwargs) != 2:
             raise Exception("define width and height as keyword")
@@ -15,8 +15,8 @@ class Square():
             if value < 0:
                 raise ValueError(k + " must be >= 0")
             setattr(self, key, value)"""
-        self.height = size
-        self.width = size
+        self.height = height
+        self.width = width
 
     def area_of_my_square(self):
         """ Area of the square """
