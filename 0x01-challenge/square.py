@@ -34,7 +34,7 @@ class Square():
 
 if __name__ == "__main__":
 
-    s = Square(height=2, width=8)
+    s = Square(height=2, width=2)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
