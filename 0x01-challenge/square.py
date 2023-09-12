@@ -10,14 +10,14 @@ class Square():
 
     def __init__(self, *args, **kwargs):
         """instantiate an object"""
+        if len(kwargs) != 2:
+            raise Exception("width and height the only fields")
         for key, value in kwargs.items():
             if type(value) is not int:
                 raise TypeError(key + " must be an integer")
             if value < 0:
                 raise ValueError(k + " must be >= 0")
             setattr(self, key, value)
-        """if self.width != self.height:
-            raise Exception("width must be == height")"""
 
     def area_of_my_square(self):
         """ Area of the square """
