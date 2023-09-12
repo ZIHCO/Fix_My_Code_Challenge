@@ -5,9 +5,6 @@
 class Square():
     """This class create square objects"""
 
-    width = 0
-    height = 0
-
     def __init__(self, **kwargs):
         """instantiate an object"""
         if len(kwargs) != 2:
